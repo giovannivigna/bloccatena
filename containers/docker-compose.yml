@@ -4,12 +4,10 @@ services:
     build: ./ganache
   truffle:
     build: ./truffle
+    ports:
+      - "8080:8080"
     depends_on:
       - "ganache"
     volumes:
       - ./code:/code
-    # command: ["tail", "-f", "/dev/null"]
-    stdin_open: true # docker run -i
-    tty: true        # docker run -t
-    command: bash
-  
+    command: ["tail", "-f", "/dev/null"]
