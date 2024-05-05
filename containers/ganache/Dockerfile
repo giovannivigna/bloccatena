@@ -4,7 +4,7 @@ FROM node:latest
 RUN mkdir /app
 # Set working directory
 WORKDIR /app
-# Install Truffle
+# Install Ganache 
 RUN npm install -g ganache-cli
 # Fix to prevent error:0308010C:digital envelope routines::unsupported
 ENV NODE_OPTIONS=--openssl-legacy-provider

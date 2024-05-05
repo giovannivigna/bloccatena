@@ -11,4 +11,4 @@ ENV NODE_OPTIONS=--openssl-legacy-provider
 # Install net-tools
 RUN apt-get update && apt-get install -y iputils-ping python3 python3-pip
 # Note: This container needs to be started with a command that prevent immediate termination 
-RUN pip install web3 ipython json
+RUN pip install web3 ipython
